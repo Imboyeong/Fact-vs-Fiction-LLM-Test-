@@ -12,12 +12,11 @@ GPT · Claude · Gemini 사실 정확도 & Hallucination 비교 프로젝트
 - 카테고리별(정의/수치/최신정보 등) 성능 차이 확인  
 - 모델별 강점·약점 도출 및 시각화
 
+
 ---
 
+
 ## Repository Structure
-
-
-
 
 Fact-vs-Fiction-Test/
 │
@@ -37,7 +36,9 @@ Fact-vs-Fiction-Test/
 └── README.md # 프로젝트 소개 문서
 
 
+
 ---
+
 
 
 ## Dataset Description
