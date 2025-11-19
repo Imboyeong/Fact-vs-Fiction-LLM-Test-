@@ -1,0 +1,35 @@
+id,category_english,category_korean,question,answer,source,source_url
+1,fact,사실 기억,세계에서 가장 오래된 대학은 어디인가?,모로코 페스의 알카라윈 대학교(Mosque and University Kairaouine).,Wikipedia - 알카라윈 대학교,https://ko.wikipedia.org/wiki/%EC%95%8C%EC%B9%B4%EB%9D%BC%EC%9C%88_%EB%8C%80%ED%95%99%EA%B5%90
+2,fact,사실 기억,인류가 처음 달에 착륙한 해는 언제인가?,인류가 처음 달에 착륙한 해는 1969년이다.,Wikipedia - Apollo 11,https://en.wikipedia.org/wiki/Apollo_11
+3,fact,사실 기억,노벨상을 최초로 수상한 여성은 누구인가?,노벨상을 최초로 수상한 여성은 마리 퀴리(Marie Curie)이다.,Wikipedia - Marie Curie,https://en.wikipedia.org/wiki/Marie_Curie
+4,fact,사실 기억,세계에서 가장 긴 강은 무엇인가?,세계에서 가장 긴 강은 일반적으로 나일강(Nile River)으로 알려져 있다.,Wikipedia - Nile,https://en.wikipedia.org/wiki/Nile
+5,numerical,수치 기반,대한민국의 2024년 출생아 수는 얼마인가?,"대한민국의 2024년 출생아 수는 약 238,300명이다.",국가데이터처-2024년 출생 통계,https://www.kostat.go.kr/board.es?mid=a10301010000&bid=204&act=view&list_no=438237
+6,numerical,수치 기반,지구의 적도 둘레 길이는 약 몇 km인가?,지구 적도 둘레 길이는 40075.017 km이다.,Wikipedia - Earth,https://en.wikipedia.org/wiki/Earth
+7,numerical,수치 기반,2024년 대한민국 1인당 국민총소득(GNI)은 약 얼마인가?,"약 49,955,000원(약 5,000만원) 또는 36,624달러이다",한국은행-보도자료,https://www.bok.or.kr/portal/bbs/B0000501/view.do?nttId=10090110&menuNo=201264&programType=newsData&relate=Y&depth=201264
+8,numerical,수치 기반,대한민국의 2025년 최저임금은 시간당 얼마인가?,"대한민국 2025년 최저임금은 시간당 10,030원이다.",최저임금위원회,https://www.minimumwage.go.kr/main.do
+9,definition,정의 설명,기계학습에서 ‘과적합(overfitting)’이란 무엇인가?,과적합은 모델이 훈련 데이터의 패턴뿐 아니라 노이즈까지 과도하게 학습해 새로운 데이터 성능이 떨어지는 상태이다.,Wikipedia - Overfitting,https://en.wikipedia.org/wiki/Overfitting
+10,definition,정의 설명,물리학에서 ‘엔트로피(entropy)’란 무엇인가?,엔트로피는 계의 무질서도 또는 가능한 미시상태 수와 관련된 물리량이며 자연 과정에서 증가한다.,Wikipedia - Entropy,https://en.wikipedia.org/wiki/Entropy
+11,definition,정의 설명,경제학의 ‘인플레이션(inflation)’을 정의하라.,인플레이션은 재화·서비스의 전반적 가격 수준이 지속적으로 상승하는 현상이다.,Wikipedia - Inflation,https://en.wikipedia.org/wiki/Inflation
+12,definition,정의 설명,인공지능에서 ‘강화학습(reinforcement learning)’이란 무엇인가?,강화학습은 환경과 상호작용하며 보상을 최대화하는 행동을 학습하는 방법이다.,Wikipedia - Reinforcement Learning,https://en.wikipedia.org/wiki/Reinforcement_learning
+13,recent,최신 정보,2024년 미국 대선에서 주요 후보는 누구였는가?,2024년 미국 대선 주요 후보는 카멀라 해리스(Kamala Harris)와 도널드 트럼프(Donald Trump)였다.,Wikipedia - 2024 US Election,https://en.wikipedia.org/wiki/2024_United_States_presidential_election
+14,recent,최신 정보,2025년 노벨 물리학상 수상자는 누구였는가?,"2025년 노벨 물리학상은 존 클라크(John Clarke), 미셸 H. 드보레(Michel H.Devoret) , 존 마르티니스(John M.Martinis)가 공동 수상했다.",NobelPrize.org - Physics 2025,https://www.nobelprize.org/prizes/physics/2025/summary/
+15,recent,최신 정보,2024 파리 올림픽 개막일은 언제였는가?,2024 파리 올림픽 개막일은 2024년 7월 26일이다.,Wikipedia - 2024 Olympics,https://en.wikipedia.org/wiki/2024_Summer_Olympics_opening_ceremony
+16,recent,최신 정보,2025년 공개된 영화 케이팝 데몬 헌터스의 감독은 누구인가?,‘KPop Demon Hunters’의 감독은 매기 강(Maggie Kang)과 크리스 아펠한스(Chris Appelhans)이다.,Wikipedia - KPop Demon Hunters,https://en.wikipedia.org/wiki/KPop_Demon_Hunters
+17,reasoning,다단계 추론,"최저임금 10,030원으로 하루 6시간·주 5일 근무할 때 한 달(4주 기준) 월급과 3.3% 공제 후 실수령액을 계산하라. (※주휴수당 미포함, 공제액 계산 시 반올림하여 구하시오)","월급은 1,203,600원이며 3.3% 공제 후 실수령액은 약 1,163,881원이다.",직접 계산,
+18,reasoning,다단계 추론,"A앱(기본 3,000원 + 1km당 700원)과 B앱(기본 5,000원 고정) 중 가게가 3km 떨어져 있을 때 더 저렴한 앱은 어느 쪽인가?","A앱 5,100원, B앱 5,000원으로 B앱이 더 저렴하다.",직접 계산,
+19,reasoning,다단계 추론,카페 A(5잔 구매 시 1잔 무료)와 카페 B(10잔 구매 시 3잔 무료) 중 총 15잔을 구매할 때 더 이득인 쪽은 어느 카페인가?,"총 15잔 기준 카페 B가 더 많은 무료 혜택을 제공하므로 더 이득이다. (A: 13잔 구매 필요, B: 12잔 구매 필요)",직접 계산,
+20,reasoning,다단계 추론,"한 달에 5편 영화를 볼 경우 연간 시청 편수는 몇 편이며, 넷플릭스 월 17,000원 기준 1편당 비용은 얼마인가?","1년 기준 60편 시청, 1편당 비용은 약 3,400원이다.",직접 계산,
+21,comparison,비교,MacBook(air M2)과 Windows 노트북(Galaxy Book4 )의 성능·호환성·사용성 차이를 비교하라.,"항목,MacBook Air M2,Galaxy Book4 Ultra
+성능,Apple M2 칩으로 일반 작업·편집에 빠르고 안정적,Intel 고성능 CPU+NVIDIA RTX로 게임·AI·3D 작업에 유리
+호환성,macOS 기반으로 대부분 앱 사용 가능하나 윈도우 전용 프로그램 일부 제약,Windows 11 기반으로 학교·정부·전공 SW 등 호환성 가장 넓음
+사용성,가볍고 조용하며 배터리 오래가고 애플 생태계 연동 강점,다양한 포트·큰 화면·고성능 활용 가능하나 발열·소음 발생 가능",,"https://www.samsung.com/us/computing/galaxy-books/galaxy-book4-ultra/?utm_source=chatgpt.com, 
+https://support.apple.com/en-us/111867?utm_source=chatgpt.com"
+22,comparison,비교,"대방역→한양대 이동 시,버스 이용과 지하철 이용 중 어떤 방식이 더 효율적인가?버스번호와 지하철 번호를 포함한 실제 추선 노선을 설명해라","대방역→한양대 이동,버스 이용: 대방역 인근 정류장에서 641번을 타고 문래역에서 2호선 환승->한양대역 하차 ( 환승 필요, 1시간 6분 소요),지하철 이용: 1호선 대방역 승차→시청역에서 2호선 환승→한양대역 하차 (환승 필요, 50분 소요) , 지하철이 더 효율적임",네이버지도_길찾기,"https://map.naver.com/p/directions/14129384.8544953,4510912.0795128,%EB%8C%80%EB%B0%A9%EC%97%AD%201%ED%98%B8%EC%84%A0,137,SUBWAY_STATION/14142772.8266389,4517113.1973574,%ED%95%9C%EC%96%91%EB%8C%80%ED%95%99%EA%B5%90%20%EC%84%9C%EC%9A%B8%EC%BA%A0%ED%8D%BC%EC%8A%A4,11591678,PLACE_POI/-/transit?c=10.00,0,0,0,dh"
+23,comparison,비교,풍력발전과 태양광발전의 장단점을 비교하라.,"발전방식,장점,단점
+태양광발전,""청정·무제한 에너지원; 필요장소에 설치 가능; 유지보수 용이·무인화 가능; 수명 길다"",""일사량 의존; 에너지밀도 낮음·설치면적 커짐; 설치장소 한정·시스템 비용 높음; 초기투자비·발전단가 높음""
+풍력발전,""연료비 거의 없음·청정에너지; 바람 있을 때 밤·낮 가리지 않고 발전 가능; 기술 검증됨·설치규모 커지면 출력 확보 가능"",""발전량 변동성 큼·바람조건 의존; 적합한 장소 한정·부지확보 어려움; 소음·진동·경관문제·주민 민원 가능""",경기환경에너지진흥원 ,https://www.ggenergy.or.kr/energy/content/story/story02_01_02?utm_source=chatgpt.com
+24,comparison,비교,정규화(normalization)와 표준화(standardization)의 차이를 설명하라.,"정규화는 데이터를 일정 범위로 스케일링, 표준화는 평균 0·표준편차 1로 변환한다.",scikit-learn Preprocessing,https://scikit-learn.org/stable/modules/preprocessing.html
+25,misconception,흔한 오해,인간이 뇌의 10%만 사용한다는 주장은 사실인가?,"‘인간이 뇌의 10%만 사용한다’는 주장은 과학적 근거가 없는 신화이며, 뇌영상 연구에 따르면 인간은 대부분의 뇌 영역을 사용한다.	",Scientific American - Do People Only Use 10 Percent of Their Brains?,https://www.scientificamerican.com/article/do-we-really-use-only-10/
+26,misconception,흔한 오해,소가 빨간색을 보면 흥분한다는 말은 사실인가?,소는 빨간색을 구분하지 못하며 움직임에 반응한다. 빨간색 때문에 흥분하는 것이 아니다.,LiveScience,https://www.livescience.com/33700-bulls-charge-red.html
+27,misconception,흔한 오해,비타민 C가 감기를 예방한다는 말에 과학적 근거가 있는가?,"비타민 C는 일반인의 감기를 예방하는 효과는 거의 없으나, 감기 증상 기간을 약간 줄일 수 있다는 연구 결과가 있다.",Cochrane Collaboration 웹사이트,https://www.cochrane.org/ko/evidence/CD000980_vitamin-c-preventing-and-treating-common-cold
+28,misconception,흔한 오해,설탕이 아이들을 과잉행동((Hyperactivity and sugar))하게 만든다라는 주장은 사실인가?,"현재까지의 연구 결과, 설탕 섭취와 아이들의 과잉행동(hyperactivity) 사이에는 명확한 과학적 인과관계가 없다.",미국 국립보건원 NIH 산하 ,https://medlineplus.gov/ency/article/002426.htm
