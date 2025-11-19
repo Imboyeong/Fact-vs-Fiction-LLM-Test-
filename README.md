@@ -17,7 +17,7 @@ GPT · Claude · Gemini 사실 정확도 & Hallucination 비교 프로젝트
 
 
 ## Repository Structure
-
+```
 Fact-vs-Fiction-Test/
 │
 ├── data/
@@ -35,7 +35,7 @@ Fact-vs-Fiction-Test/
 │
 └── README.md # 프로젝트 소개 문서
 
-
+```
 
 ---
 
