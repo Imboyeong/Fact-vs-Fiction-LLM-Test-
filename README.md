@@ -14,10 +14,7 @@ GPT · Claude · Gemini 사실 정확도 & Hallucination 비교 프로젝트
 
 ---
 
-
-```   
 ## Repository Structure
-
 
 Fact-vs-Fiction-Test/
 │
@@ -34,11 +31,11 @@ Fact-vs-Fiction-Test/
 │
 ├── images/ # README 삽입 이미지
 │
-└── README.md
+└── README.md # 프로젝트 소개 문서
 
 
 ---
-```md
+
 ## Dataset Description
 
 ### questions.csv  
@@ -54,13 +51,18 @@ Fact-vs-Fiction-Test/
 - comparison (비교)  
 - misconception (흔한 오해)
 
+---
+
 ### answers.csv  
 - 모든 질문의 정답  
 - 공식 출처 + URL 포함  
 - numerical·recent 항목 최신 기준 반영  
 
+---
+
 ### responses.csv  
-- GPT / Claude / Gemini 응답을 동일 프롬프트, temperature=0 조건으로 수집  
+- GPT / Claude / Gemini 응답을  
+  동일 프롬프트 · 동일 temperature(0)로 수집  
 
 ---
 
@@ -72,12 +74,13 @@ Fact-vs-Fiction-Test/
    - temperature=0  
    - 동일 system prompt 설정  
 
-2. **채점 기준**  
+2. **채점 기준**
+
 | 점수 | 의미 |
 |------|------|
-| 1.0 | 완전 정답 |
-| 0.5 | 핵심 내용은 맞음 |
-| 0.0 | 오답 / 허위 정보 포함 |
+| 1.0  | 완전 정답 |
+| 0.5  | 핵심 내용은 맞음 |
+| 0.0  | 오답 / 허위 정보 포함 |
 
 3. **Hallucination 자동 태깅 기준**  
 - 사실 왜곡 (Distortion)  
@@ -93,14 +96,14 @@ Fact-vs-Fiction-Test/
 - 모델별 총 정답률  
 - 카테고리별 정확도 비교  
 - hallucination 발생 비율  
-- reasoning/최근 정보 성능 차이  
+- reasoning / 최신 정보 영역 성능 차이  
 
 ---
 
 ## Key Insights
 
 - GPT: 정의·비교 질문에서 가장 안정적  
-- Claude: 계산·추론(reasoning)에서 강점  
+- Claude: 계산·추론(reasoning)에 강점  
 - Gemini: 최신 정보(recent)에서 상대적으로 취약  
 - misconception 질문은 모든 모델에서 hallucination 발생 가능  
 
@@ -122,14 +125,12 @@ Fact-vs-Fiction-Test/
 |------|-----------|
 | 질문 데이터셋 | 28개 질문 구성, 카테고리 분류 |
 | 정답 구축 | answers.csv 제작, 출처 정리 |
-| 모델 응답 수집 | GPT/Claude/Gemini 응답 수집 |
-| 분석/시각화 | 채점 코드, 그래프 분석 |
-| GitHub 문서화 | README·폴더 구조 정리 |
-
+| 모델 응답 수집 | GPT / Claude / Gemini 응답 수집 |
+| 분석·시각화 | 채점 코드, 그래프 분석 |
+| GitHub 문서화 | README, 폴더 구조 정리 |
 
 ---
 
 ## Contact
 
 프로젝트 관련 문의는 Issue 탭을 통해 남겨주세요.
-
