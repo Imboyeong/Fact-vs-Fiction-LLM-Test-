@@ -2,8 +2,6 @@
 ### GPT-4o vs Claude-3.5-Sonnet vs Gemini-1.5-Pro  
 **사실 정확도(Fact Accuracy) & 환각(Hallucination) 비교 분석 프로젝트**
 
-![Python](https://img.shields.io/badge/Python-3.8%2B-blue) ![Data Analysis](https://img.shields.io/badge/Analysis-Pandas%20%7C%20Matplotlib-orange) ![Status](https://img.shields.io/badge/Status-Completed-success)
-
 ---
 
 ## 📖 Project Overview
