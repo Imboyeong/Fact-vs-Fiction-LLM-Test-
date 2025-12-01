@@ -195,7 +195,8 @@ def calculate_score(q_id, response, ground_truth_db):
 ### 모델별 요약 이미지
 
 ```
-![모델별 요약: 정확도와 안정성](%EB%AA%A8%EB%8D%B8%EB%B3%84%20%EC%9A%94%EC%95%BD%20%EC%A0%95%ED%99%95%EB%8F%84%EC%99%80%20%EC%95%88%EC%A0%95%EC%84%B1.png)
+![모델별 요약 이미지](https://raw.githubusercontent.com/Imboyeong/Fact-vs-Fiction-LLM-Test/main/%EB%AA%A8%EB%8D%B8%EB%B3%84%20%EC%9A%94%EC%95%BD%20%EC%A0%95%ED%99%95%EB%8F%84%EC%99%80%20%EC%95%)
+
 
 ```
 
