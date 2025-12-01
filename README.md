@@ -195,7 +195,7 @@ def calculate_score(q_id, response, ground_truth_db):
 ### 모델별 요약 이미지
 
 ```
-<img width="1920" height="1080" alt="Image" src="https://github.com/user-attachments/assets/ad97c541-001e-42c8-bb62-b3a72cd97788" />
+![모델별 요약 이미지](https://github.com/user-attachments/assets/ad97c541-001e-42c8-bb62-b3a72cd97788)
 
 
 ```
