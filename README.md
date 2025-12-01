@@ -82,14 +82,14 @@ python analysis/llm_scoring_functions.py
 
 #### 1) Questions (questions.csv)
 
-* fact / simple
-* numerical
-* definition
-* recent
-* reasoning
-* comparison
-* misconception
-* medical / practical
+* fact (사실)
+* numerical (수치 기반)
+* definition (정의 설명)
+* recent (최신 정보)
+* reasoning (추론)
+* comparison (비교)
+* misconception (오해)
+* image (이미지 이해)
 
 #### 2) Ground Truth (answers.csv)
 
