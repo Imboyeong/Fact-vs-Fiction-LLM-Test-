@@ -1,5 +1,5 @@
 ## Fact vs Fiction: LLM Accuracy Test
-### GPT-4o vs Claude-3.5-Sonnet vs Gemini-1.5-Pro  
+### GPT-5 vs Claude-4.0-Sonnet vs Gemini-2.5-Flash  
 한국어 사실 정확도(Fact Accuracy) & 환각(Hallucination) 비교 분석 프로젝트
 
 ---
@@ -186,16 +186,16 @@ def calculate_score(q_id, response, ground_truth_db):
 
 | 순위 | 모델         | 종합 점수 | 오류(Factual / Partial) | 비고       |
 | -- | ---------- | ----- | --------------------- | -------- |
-| 1위 | GPT-4o     | 0.81  | 4 / 4                 | 안정적·균형적  |
-| 2위 | Gemini-1.5 | 0.80  | 5 / 3                 | 최신 정보 강점 |
-| 3위 | Claude-3.5 | 0.75  | 6 / 4                 | 비교·추론 취약 |
+| 1위 | GPT-5     | 0.81  | 4 / 4                 | 안정적·균형적  |
+| 2위 | Gemini-2.5 | 0.80  | 5 / 3                 | 최신 정보 강점 |
+| 3위 | Claude-4.0 | 0.75  | 6 / 4                 | 비교·추론 취약 |
 
 ---
 
 ### 모델별 요약 이미지
 
-```md
-![모델별 요약표](./모델별%20요약표.png)
+```
+***********확인해볼 것 이미지 넣을 건지 안넣을건지
 ```
 
 ---
@@ -203,7 +203,7 @@ def calculate_score(q_id, response, ground_truth_db):
 ### Key Findings
 
 모델별 성능의 핵심 인사이트를 시각화하여 정리했습니다.
-![모델별 핵심요약](./모델별%20핵심요약.png)
+***********확인해볼 것 이미지 넣을 건지 안넣을건지
 ---
 
 ### Limitations & Future Work
