@@ -1,5 +1,5 @@
 ## Fact vs Fiction: LLM Accuracy Test
-### GPT-5.1 vs Claude Sonnet-4.5 vs Gemini Flash-2.5 
+### GPT-5.1 · Claude Sonnet-4.5 · Gemini Flash-2.5 (모두 **무료 버전 기준**)
 한국어 사실 정확도(Fact Accuracy) & 환각(Hallucination) 비교 분석 프로젝트
 
 ---
