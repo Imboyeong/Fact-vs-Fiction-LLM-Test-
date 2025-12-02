@@ -233,7 +233,8 @@ def calculate_score(q_id, response, ground_truth_db):
 
 ---
 👉 자세한 분석과 전체 결과는 아래 PDF 문서를 참고해주세요.
-📄 Fact-vs-Fiction LLM Reliability Full Report (PDF)
+
+📄 [Fact-vs-Fiction LLM Reliability Full Report (PDF)](https://github.com/Imboyeong/Fact-vs-Fiction-LLM-Test-/blob/main/Fact-vs-Fiction-LLM-Report.pdf)
 ---
 ### Limitations & Future Work
 
