@@ -232,7 +232,9 @@ def calculate_score(q_id, response, ground_truth_db):
 
 
 ---
-
+👉 자세한 분석과 전체 결과는 아래 PDF 문서를 참고해주세요.
+📄 Fact-vs-Fiction LLM Reliability Full Report (PDF)
+---
 ### Limitations & Future Work
 
 * 키워드 기반 매칭의 한계 → 의미 기반 평가로 확장 예정
