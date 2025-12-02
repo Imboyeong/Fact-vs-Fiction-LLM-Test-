@@ -230,12 +230,8 @@ def calculate_score(q_id, response, ground_truth_db):
 
 ![모델별 요약 이미지](https://github.com/user-attachments/assets/ad97c541-001e-42c8-bb62-b3a72cd97788)
 
-
 ---
-👉 자세한 분석과 전체 결과는 아래 PDF 문서를 참고해주세요.
 
-📄 [Fact-vs-Fiction LLM Reliability Full Report (PDF)](https://github.com/Imboyeong/Fact-vs-Fiction-LLM-Test-/blob/main/Fact-vs-Fiction-LLM-Report.pdf)
----
 ### Limitations & Future Work
 
 * 키워드 기반 매칭의 한계 → 의미 기반 평가로 확장 예정
@@ -243,6 +239,11 @@ def calculate_score(q_id, response, ground_truth_db):
 * 검색 허용 vs 비허용 평가 분리
 * 다국어 실험 추가 예정
 
+
+---
+👉 자세한 분석과 전체 결과는 아래 PDF 문서를 참고해주세요.
+
+📄 [Fact-vs-Fiction LLM Report (PDF)](https://github.com/Imboyeong/Fact-vs-Fiction-LLM-Test-/blob/main/Fact-vs-Fiction-LLM-Report.pdf)
 ---
 
 ### Team Roles
