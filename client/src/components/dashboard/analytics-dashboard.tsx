@@ -11,7 +11,9 @@ import {
   PolarGrid,
   PolarAngleAxis,
   PolarRadiusAxis,
-  Radar
+  Radar,
+  LineChart,
+  Line
 } from 'recharts';
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { ComparisonResult, MODEL_INFO } from "@/lib/comparison-data";
@@ -21,22 +23,22 @@ interface AnalyticsDashboardProps {
 }
 
 export function AnalyticsDashboard({ results }: AnalyticsDashboardProps) {
-  const barData = results.map(r => ({
+  const chartData = results.map(r => ({
     name: MODEL_INFO[r.modelId].name,
     정확도: r.stats.accuracy,
     신뢰성: r.stats.reliability,
-    환각위험: r.stats.hallucinationRate * 10, // Scale up for visibility
+    속도: r.stats.speed / 20, // Scale down for visibility alongside percentage
   }));
 
   return (
-    <div className="grid grid-cols-1 md:grid-cols-2 gap-4 animate-in fade-in slide-in-from-bottom-4 duration-500">
+    <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
       <Card>
         <CardHeader className="pb-2">
-          <CardTitle className="text-base font-medium">성능 비교 분석</CardTitle>
+          <CardTitle className="text-base font-medium">모델 성능 종합 비교</CardTitle>
         </CardHeader>
         <CardContent className="h-[250px] w-full">
           <ResponsiveContainer width="100%" height="100%">
-            <BarChart data={barData} margin={{ top: 10, right: 10, left: -20, bottom: 0 }}>
+            <BarChart data={chartData} margin={{ top: 10, right: 10, left: -20, bottom: 0 }}>
               <CartesianGrid strokeDasharray="3 3" vertical={false} opacity={0.3} />
               <XAxis dataKey="name" fontSize={10} tickLine={false} axisLine={false} />
               <YAxis fontSize={10} tickLine={false} axisLine={false} />
@@ -45,9 +47,8 @@ export function AnalyticsDashboard({ results }: AnalyticsDashboardProps) {
                 cursor={{ fill: 'rgba(0,0,0,0.05)' }}
               />
               <Legend iconType="circle" fontSize={10} />
-              <Bar dataKey="정확도" fill="hsl(var(--primary))" radius={[4, 4, 0, 0]} maxBarSize={40} />
-              <Bar dataKey="신뢰성" fill="#8884d8" radius={[4, 4, 0, 0]} maxBarSize={40} />
-              <Bar dataKey="환각위험" fill="#ff8042" radius={[4, 4, 0, 0]} maxBarSize={40} />
+              <Bar dataKey="정확도" fill="hsl(var(--primary))" radius={[4, 4, 0, 0]} maxBarSize={30} />
+              <Bar dataKey="신뢰성" fill="#8884d8" radius={[4, 4, 0, 0]} maxBarSize={30} />
             </BarChart>
           </ResponsiveContainer>
         </CardContent>
@@ -55,17 +56,18 @@ export function AnalyticsDashboard({ results }: AnalyticsDashboardProps) {
 
       <Card>
          <CardHeader className="pb-2">
-          <CardTitle className="text-base font-medium">모델별 강점 분석</CardTitle>
+          <CardTitle className="text-base font-medium">응답 속도 분석 (ms)</CardTitle>
         </CardHeader>
         <CardContent className="h-[250px] w-full">
            <ResponsiveContainer width="100%" height="100%">
-            <RadarChart cx="50%" cy="50%" outerRadius="70%" data={barData}>
-              <PolarGrid opacity={0.3} />
-              <PolarAngleAxis dataKey="name" fontSize={10} />
-              <PolarRadiusAxis angle={30} domain={[0, 100]} fontSize={10} />
-              <Radar name="정확도" dataKey="정확도" stroke="hsl(var(--primary))" fill="hsl(var(--primary))" fillOpacity={0.3} />
-              <Legend iconType="circle" fontSize={10} />
-            </RadarChart>
+            <BarChart data={results.map(r => ({ name: MODEL_INFO[r.modelId].name, 응답시간: r.stats.speed }))} layout="vertical" margin={{ left: 0 }}>
+               <CartesianGrid strokeDasharray="3 3" horizontal={false} opacity={0.3} />
+               <XAxis type="number" fontSize={10} hide />
+               <YAxis dataKey="name" type="category" width={100} fontSize={11} tickLine={false} axisLine={false} />
+               <Tooltip cursor={{fill: 'transparent'}} contentStyle={{ borderRadius: '8px', fontSize: '12px' }} />
+               <Bar dataKey="응답시간" fill="#10b981" radius={[0, 4, 4, 0]} barSize={20}>
+               </Bar>
+            </BarChart>
           </ResponsiveContainer>
         </CardContent>
       </Card>
