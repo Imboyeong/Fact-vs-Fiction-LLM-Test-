@@ -11,16 +11,19 @@ import {
   SelectValue 
 } from "@/components/ui/select";
 import { Tabs, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import { Menu, Sparkles, LayoutDashboard, MessageSquare } from "lucide-react";
+import { Menu, Sparkles, LayoutDashboard, LineChart } from "lucide-react";
 import { INITIAL_GREETING, simulateAIResponse, type Message } from "@/lib/mock-data";
 import { simulateComparison, type ComparisonResult } from "@/lib/comparison-data";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { ComparisonCard } from "@/components/comparison/comparison-card";
 import { AnalyticsDashboard } from "@/components/dashboard/analytics-dashboard";
 import { ModelRecommender } from "@/components/recommendation/model-recommender";
+import { StudentLevel } from "@/lib/student-levels";
+import { AchievementDashboard } from "@/components/dashboard/achievement-dashboard";
 
 export default function ChatPage() {
-  const [mode, setMode] = useState<"chat" | "compare">("chat");
+  const [mode, setMode] = useState<"chat" | "compare" | "dashboard">("chat");
+  const [level, setLevel] = useState<StudentLevel>("high");
   const [messages, setMessages] = useState<Message[]>([INITIAL_GREETING]);
   const [comparisonResults, setComparisonResults] = useState<ComparisonResult[]>([]);
   const [lastQuestion, setLastQuestion] = useState<string>("");
@@ -50,7 +53,7 @@ export default function ChatPage() {
       setMessages((prev) => [...prev, userMessage]);
 
       try {
-        const responseText = await simulateAIResponse(content);
+        const responseText = await simulateAIResponse(content, level);
         const aiMessage: Message = {
           id: (Date.now() + 1).toString(),
           role: "assistant",
@@ -79,7 +82,7 @@ export default function ChatPage() {
   return (
     <div className="flex h-screen w-full bg-background overflow-hidden">
       {/* Sidebar - Desktop */}
-      <ChatSidebar />
+      <ChatSidebar currentLevel={level} onLevelChange={setLevel} />
 
       {/* Main Content */}
       <div className="flex-1 flex flex-col h-full w-full relative">
@@ -94,17 +97,18 @@ export default function ChatPage() {
                 </Button>
               </SheetTrigger>
               <SheetContent side="left" className="p-0 w-[260px]">
-                <ChatSidebar />
+                <ChatSidebar currentLevel={level} onLevelChange={setLevel} />
               </SheetContent>
             </Sheet>
             <span className="font-heading font-bold hidden sm:inline">AI 튜터</span>
           </div>
 
           <div className="flex-1 flex justify-center">
-            <Tabs value={mode} onValueChange={(v) => setMode(v as any)} className="w-[200px]">
-              <TabsList className="grid w-full grid-cols-2">
+            <Tabs value={mode} onValueChange={(v) => setMode(v as any)} className="w-auto">
+              <TabsList className="grid w-full grid-cols-3">
                 <TabsTrigger value="chat">채팅</TabsTrigger>
                 <TabsTrigger value="compare">비교 모드</TabsTrigger>
+                <TabsTrigger value="dashboard" className="hidden sm:inline-flex">성취도</TabsTrigger>
               </TabsList>
             </Tabs>
           </div>
@@ -116,12 +120,15 @@ export default function ChatPage() {
                   <SelectValue placeholder="모델 선택" />
                 </SelectTrigger>
                 <SelectContent>
-                  <SelectItem value="gpt-4o">GPT-4o (가장 똑똑함)</SelectItem>
+                  <SelectItem value="gpt-4o">GPT-4o</SelectItem>
                   <SelectItem value="gemini-pro">Gemini Pro 1.5</SelectItem>
                   <SelectItem value="claude-3-opus">Claude 3.5 Sonnet</SelectItem>
                 </SelectContent>
               </Select>
             )}
+             <Button variant="ghost" size="icon" className="md:hidden" onClick={() => setMode("dashboard")}>
+               <LineChart className="h-5 w-5" />
+             </Button>
              <Button variant="ghost" size="sm" className="hidden md:flex text-muted-foreground hover:text-primary">
                <Sparkles className="mr-2 h-4 w-4" />
                업그레이드
@@ -133,8 +140,26 @@ export default function ChatPage() {
         <div ref={scrollRef} className="flex-1 overflow-y-auto p-4 md:p-6 scroll-smooth bg-muted/10">
           <div className="max-w-5xl mx-auto pb-4 h-full">
             
-            {mode === "chat" ? (
-              // CHAT MODE
+            {/* Always show achievement dashboard in dashboard mode OR small summary in chat mode if needed (skipping for clean UI) */}
+            {mode === "dashboard" && (
+              <div className="space-y-6">
+                <h2 className="text-2xl font-heading font-bold">나의 학습 현황</h2>
+                <AchievementDashboard level={level} />
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                  {/* Placeholder for detailed charts */}
+                  <div className="h-[300px] bg-card rounded-xl border p-6 flex flex-col items-center justify-center text-muted-foreground">
+                    <LineChart className="h-10 w-10 mb-4 opacity-20" />
+                    <p>과목별 성취도 그래프가 여기에 표시됩니다.</p>
+                  </div>
+                   <div className="h-[300px] bg-card rounded-xl border p-6 flex flex-col items-center justify-center text-muted-foreground">
+                    <LayoutDashboard className="h-10 w-10 mb-4 opacity-20" />
+                    <p>오답 노트 및 약점 분석이 여기에 표시됩니다.</p>
+                  </div>
+                </div>
+              </div>
+            )}
+            
+            {mode === "chat" && (
               <div className="max-w-3xl mx-auto space-y-6">
                 {messages.map((message) => (
                   <MessageBubble key={message.id} message={message} />
@@ -151,8 +176,9 @@ export default function ChatPage() {
                   </div>
                 )}
               </div>
-            ) : (
-              // COMPARISON MODE
+            )} 
+            
+            {mode === "compare" && (
               <div className="space-y-8 min-h-full flex flex-col justify-center">
                 {!lastQuestion && !isLoading ? (
                   <div className="text-center text-muted-foreground py-20">
@@ -206,13 +232,15 @@ export default function ChatPage() {
           </div>
         </div>
 
-        {/* Input Area */}
-        <div className="p-4 bg-background/80 backdrop-blur-sm border-t md:border-t-0 md:bg-transparent">
-          <ChatInput 
-            onSend={handleSendMessage} 
-            isLoading={isLoading} 
-          />
-        </div>
+        {/* Input Area - Hide in Dashboard mode */}
+        {mode !== "dashboard" && (
+          <div className="p-4 bg-background/80 backdrop-blur-sm border-t md:border-t-0 md:bg-transparent">
+            <ChatInput 
+              onSend={handleSendMessage} 
+              isLoading={isLoading} 
+            />
+          </div>
+        )}
       </div>
     </div>
   );
