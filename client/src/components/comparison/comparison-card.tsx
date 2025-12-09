@@ -38,7 +38,7 @@ export function ComparisonCard({ result }: ComparisonCardProps) {
         <div className="grid grid-cols-2 gap-3 pt-4 border-t">
           <div className="space-y-1">
             <div className="flex justify-between text-xs text-muted-foreground">
-              <span>Accuracy</span>
+              <span>정확도</span>
               <span>{result.stats.accuracy}%</span>
             </div>
             <Progress value={result.stats.accuracy} className="h-1.5" indicatorClassName={getScoreColor(result.stats.accuracy)} />
@@ -46,7 +46,7 @@ export function ComparisonCard({ result }: ComparisonCardProps) {
           
           <div className="space-y-1">
             <div className="flex justify-between text-xs text-muted-foreground">
-              <span>Reliability</span>
+              <span>신뢰성</span>
               <span>{result.stats.reliability}%</span>
             </div>
             <Progress value={result.stats.reliability} className="h-1.5" indicatorClassName="bg-blue-500" />
@@ -58,8 +58,8 @@ export function ComparisonCard({ result }: ComparisonCardProps) {
           <div className="rounded-md bg-orange-500/10 p-3 flex items-start gap-2 text-xs text-orange-700 dark:text-orange-400">
             <AlertTriangle className="h-4 w-4 shrink-0 mt-0.5" />
             <div>
-              <span className="font-semibold block mb-1">Potential Hallucination Risk</span>
-              Hallucination rate detected at {result.stats.hallucinationRate}%. Verify facts carefully.
+              <span className="font-semibold block mb-1">할루시네이션(환각) 위험 감지</span>
+              {result.stats.hallucinationRate}%의 환각 비율이 감지되었습니다. 팩트 체크가 필요합니다.
             </div>
           </div>
         )}

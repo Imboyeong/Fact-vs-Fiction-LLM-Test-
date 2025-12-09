@@ -42,7 +42,7 @@ export function ChatInput({ onSend, isLoading }: ChatInputProps) {
           value={input}
           onChange={(e) => setInput(e.target.value)}
           onKeyDown={handleKeyDown}
-          placeholder="Ask anything about your studies..."
+          placeholder="공부하다 궁금한 점을 물어보세요..."
           className="min-h-[50px] max-h-[200px] w-full resize-none border-0 bg-transparent px-4 py-3 focus-visible:ring-0 shadow-none text-base"
           disabled={isLoading}
         />
@@ -69,7 +69,7 @@ export function ChatInput({ onSend, isLoading }: ChatInputProps) {
       </div>
       <div className="text-center mt-2">
         <p className="text-xs text-muted-foreground">
-          AI can make mistakes. Please verify important information.
+          AI는 실수할 수 있습니다. 중요한 정보는 꼭 확인하세요.
         </p>
       </div>
     </div>

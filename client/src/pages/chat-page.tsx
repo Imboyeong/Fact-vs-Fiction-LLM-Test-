@@ -97,14 +97,14 @@ export default function ChatPage() {
                 <ChatSidebar />
               </SheetContent>
             </Sheet>
-            <span className="font-heading font-bold hidden sm:inline">AI Tutor</span>
+            <span className="font-heading font-bold hidden sm:inline">AI 튜터</span>
           </div>
 
           <div className="flex-1 flex justify-center">
             <Tabs value={mode} onValueChange={(v) => setMode(v as any)} className="w-[200px]">
               <TabsList className="grid w-full grid-cols-2">
-                <TabsTrigger value="chat">Chat</TabsTrigger>
-                <TabsTrigger value="compare">Compare</TabsTrigger>
+                <TabsTrigger value="chat">채팅</TabsTrigger>
+                <TabsTrigger value="compare">비교 모드</TabsTrigger>
               </TabsList>
             </Tabs>
           </div>
@@ -113,10 +113,10 @@ export default function ChatPage() {
             {mode === "chat" && (
               <Select value={model} onValueChange={setModel}>
                 <SelectTrigger className="w-[180px] h-9 border-none bg-muted/50 hover:bg-muted/80 focus:ring-0">
-                  <SelectValue placeholder="Select model" />
+                  <SelectValue placeholder="모델 선택" />
                 </SelectTrigger>
                 <SelectContent>
-                  <SelectItem value="gpt-4o">GPT-4o (Smartest)</SelectItem>
+                  <SelectItem value="gpt-4o">GPT-4o (가장 똑똑함)</SelectItem>
                   <SelectItem value="gemini-pro">Gemini Pro 1.5</SelectItem>
                   <SelectItem value="claude-3-opus">Claude 3.5 Sonnet</SelectItem>
                 </SelectContent>
@@ -124,7 +124,7 @@ export default function ChatPage() {
             )}
              <Button variant="ghost" size="sm" className="hidden md:flex text-muted-foreground hover:text-primary">
                <Sparkles className="mr-2 h-4 w-4" />
-               Upgrade
+               업그레이드
              </Button>
           </div>
         </header>
@@ -157,8 +157,8 @@ export default function ChatPage() {
                 {!lastQuestion && !isLoading ? (
                   <div className="text-center text-muted-foreground py-20">
                     <LayoutDashboard className="h-12 w-12 mx-auto mb-4 opacity-20" />
-                    <h3 className="text-lg font-medium">Ready to Compare Models</h3>
-                    <p className="text-sm">Ask a question to see how GPT-4o, Gemini, and Claude respond side-by-side.</p>
+                    <h3 className="text-lg font-medium">모델 비교 준비 완료</h3>
+                    <p className="text-sm">질문을 입력하면 GPT-4o, Gemini, Claude가 동시에 답변하고 성능을 비교합니다.</p>
                   </div>
                 ) : (
                   <>

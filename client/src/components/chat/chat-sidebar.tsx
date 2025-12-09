@@ -17,14 +17,14 @@ export function ChatSidebar() {
         
         <Button className="w-full justify-start gap-2 shadow-sm" size="lg">
           <Plus className="h-4 w-4" />
-          New Chat
+          새로운 채팅
         </Button>
       </div>
 
       <ScrollArea className="flex-1 px-3">
         <div className="space-y-4">
           <div className="px-2 py-1">
-            <h3 className="mb-2 text-xs font-medium text-muted-foreground/70 uppercase tracking-wider">Today</h3>
+            <h3 className="mb-2 text-xs font-medium text-muted-foreground/70 uppercase tracking-wider">오늘</h3>
             <div className="space-y-1">
               {MOCK_SESSIONS.filter(s => s.date === "Today").map((session) => (
                 <Button
@@ -40,7 +40,7 @@ export function ChatSidebar() {
           </div>
           
           <div className="px-2 py-1">
-            <h3 className="mb-2 text-xs font-medium text-muted-foreground/70 uppercase tracking-wider">Yesterday</h3>
+            <h3 className="mb-2 text-xs font-medium text-muted-foreground/70 uppercase tracking-wider">어제</h3>
             <div className="space-y-1">
               {MOCK_SESSIONS.filter(s => s.date === "Yesterday").map((session) => (
                 <Button
@@ -56,7 +56,7 @@ export function ChatSidebar() {
           </div>
 
            <div className="px-2 py-1">
-            <h3 className="mb-2 text-xs font-medium text-muted-foreground/70 uppercase tracking-wider">Previous 7 Days</h3>
+            <h3 className="mb-2 text-xs font-medium text-muted-foreground/70 uppercase tracking-wider">지난 7일</h3>
             <div className="space-y-1">
               {MOCK_SESSIONS.filter(s => s.date === "Previous 7 Days").map((session) => (
                 <Button
@@ -79,8 +79,8 @@ export function ChatSidebar() {
              <span className="text-xs font-bold">JD</span>
           </div>
           <div className="flex flex-col items-start text-xs">
-            <span className="font-medium">John Doe</span>
-            <span className="text-muted-foreground">Student Plan</span>
+            <span className="font-medium">홍길동</span>
+            <span className="text-muted-foreground">학생 플랜</span>
           </div>
           <Settings className="ml-auto h-4 w-4 text-muted-foreground" />
         </Button>

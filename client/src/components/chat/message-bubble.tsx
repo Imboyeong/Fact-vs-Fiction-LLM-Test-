@@ -29,7 +29,7 @@ export function MessageBubble({ message }: MessageBubbleProps) {
       <div className={cn("flex flex-col max-w-[80%] gap-1", isUser ? "items-end" : "items-start")}>
         <div className="flex items-center gap-2">
           <span className="text-xs font-medium text-muted-foreground">
-            {isUser ? "You" : "AI Tutor"}
+            {isUser ? "나" : "AI 튜터"}
           </span>
           <span className="text-[10px] text-muted-foreground/60">
             {message.timestamp.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })}

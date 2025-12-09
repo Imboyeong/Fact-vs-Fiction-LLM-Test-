@@ -23,16 +23,16 @@ interface AnalyticsDashboardProps {
 export function AnalyticsDashboard({ results }: AnalyticsDashboardProps) {
   const barData = results.map(r => ({
     name: MODEL_INFO[r.modelId].name,
-    Accuracy: r.stats.accuracy,
-    Reliability: r.stats.reliability,
-    Hallucination: r.stats.hallucinationRate * 10, // Scale up for visibility
+    정확도: r.stats.accuracy,
+    신뢰성: r.stats.reliability,
+    환각위험: r.stats.hallucinationRate * 10, // Scale up for visibility
   }));
 
   return (
     <div className="grid grid-cols-1 md:grid-cols-2 gap-4 animate-in fade-in slide-in-from-bottom-4 duration-500">
       <Card>
         <CardHeader className="pb-2">
-          <CardTitle className="text-base font-medium">Performance Comparison</CardTitle>
+          <CardTitle className="text-base font-medium">성능 비교 분석</CardTitle>
         </CardHeader>
         <CardContent className="h-[250px] w-full">
           <ResponsiveContainer width="100%" height="100%">
@@ -45,9 +45,9 @@ export function AnalyticsDashboard({ results }: AnalyticsDashboardProps) {
                 cursor={{ fill: 'rgba(0,0,0,0.05)' }}
               />
               <Legend iconType="circle" fontSize={10} />
-              <Bar dataKey="Accuracy" fill="hsl(var(--primary))" radius={[4, 4, 0, 0]} maxBarSize={40} />
-              <Bar dataKey="Reliability" fill="#8884d8" radius={[4, 4, 0, 0]} maxBarSize={40} />
-              <Bar dataKey="Hallucination" fill="#ff8042" radius={[4, 4, 0, 0]} maxBarSize={40} />
+              <Bar dataKey="정확도" fill="hsl(var(--primary))" radius={[4, 4, 0, 0]} maxBarSize={40} />
+              <Bar dataKey="신뢰성" fill="#8884d8" radius={[4, 4, 0, 0]} maxBarSize={40} />
+              <Bar dataKey="환각위험" fill="#ff8042" radius={[4, 4, 0, 0]} maxBarSize={40} />
             </BarChart>
           </ResponsiveContainer>
         </CardContent>
@@ -55,7 +55,7 @@ export function AnalyticsDashboard({ results }: AnalyticsDashboardProps) {
 
       <Card>
          <CardHeader className="pb-2">
-          <CardTitle className="text-base font-medium">Model Strengths</CardTitle>
+          <CardTitle className="text-base font-medium">모델별 강점 분석</CardTitle>
         </CardHeader>
         <CardContent className="h-[250px] w-full">
            <ResponsiveContainer width="100%" height="100%">
@@ -63,7 +63,7 @@ export function AnalyticsDashboard({ results }: AnalyticsDashboardProps) {
               <PolarGrid opacity={0.3} />
               <PolarAngleAxis dataKey="name" fontSize={10} />
               <PolarRadiusAxis angle={30} domain={[0, 100]} fontSize={10} />
-              <Radar name="Accuracy" dataKey="Accuracy" stroke="hsl(var(--primary))" fill="hsl(var(--primary))" fillOpacity={0.3} />
+              <Radar name="정확도" dataKey="정확도" stroke="hsl(var(--primary))" fill="hsl(var(--primary))" fillOpacity={0.3} />
               <Legend iconType="circle" fontSize={10} />
             </RadarChart>
           </ResponsiveContainer>
