@@ -11,16 +11,18 @@ import {
   SelectValue 
 } from "@/components/ui/select";
 import { Tabs, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import { Menu, Sparkles, LineChart, LayoutDashboard } from "lucide-react";
+import { Menu, Sparkles, LineChart, Map, Search } from "lucide-react";
 import { INITIAL_GREETING, simulateAIResponse, type Message } from "@/lib/mock-data";
 import { simulateComparison, type ComparisonResult } from "@/lib/comparison-data";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { StudentLevel } from "@/lib/student-levels";
-import { AchievementDashboard } from "@/components/dashboard/achievement-dashboard";
 import { ComparisonDashboardLayout } from "@/components/comparison/comparison-dashboard-layout";
+import { RecommendationPage } from "@/components/recommendation/recommendation-page";
+import { LearningPathPage } from "@/components/learning-path/learning-path-page";
+import { ReferenceMaterials } from "@/components/chat/reference-materials";
 
 export default function ChatPage() {
-  const [mode, setMode] = useState<"chat" | "compare" | "dashboard">("chat");
+  const [mode, setMode] = useState<"chat" | "compare" | "recommend" | "path">("chat");
   const [level, setLevel] = useState<StudentLevel>("high");
   const [messages, setMessages] = useState<Message[]>([INITIAL_GREETING]);
   const [comparisonResults, setComparisonResults] = useState<ComparisonResult[]>([]);
@@ -101,12 +103,13 @@ export default function ChatPage() {
             <span className="font-heading font-bold hidden sm:inline">AI 튜터</span>
           </div>
 
-          <div className="flex-1 flex justify-center">
-            <Tabs value={mode} onValueChange={(v) => setMode(v as any)} className="w-auto">
-              <TabsList className="grid w-full grid-cols-3">
-                <TabsTrigger value="chat">채팅</TabsTrigger>
-                <TabsTrigger value="compare">비교 모드</TabsTrigger>
-                <TabsTrigger value="dashboard" className="hidden sm:inline-flex">성취도</TabsTrigger>
+          <div className="flex-1 flex justify-center max-w-2xl">
+            <Tabs value={mode} onValueChange={(v) => setMode(v as any)} className="w-full">
+              <TabsList className="grid w-full grid-cols-4">
+                <TabsTrigger value="chat" className="text-xs sm:text-sm">채팅</TabsTrigger>
+                <TabsTrigger value="compare" className="text-xs sm:text-sm">비교</TabsTrigger>
+                <TabsTrigger value="recommend" className="text-xs sm:text-sm">추천</TabsTrigger>
+                <TabsTrigger value="path" className="text-xs sm:text-sm">학습경로</TabsTrigger>
               </TabsList>
             </Tabs>
           </div>
@@ -114,22 +117,19 @@ export default function ChatPage() {
           <div className="hidden md:flex items-center gap-2">
             {mode === "chat" && (
               <Select value={model} onValueChange={setModel}>
-                <SelectTrigger className="w-[180px] h-9 border-none bg-muted/50 hover:bg-muted/80 focus:ring-0">
+                <SelectTrigger className="w-[140px] h-9 border-none bg-muted/50 hover:bg-muted/80 focus:ring-0">
                   <SelectValue placeholder="모델 선택" />
                 </SelectTrigger>
                 <SelectContent>
                   <SelectItem value="gpt-4o">GPT-4o</SelectItem>
-                  <SelectItem value="gemini-pro">Gemini Pro 1.5</SelectItem>
-                  <SelectItem value="claude-3-opus">Claude 3.5 Sonnet</SelectItem>
+                  <SelectItem value="gemini-pro">Gemini Pro</SelectItem>
+                  <SelectItem value="claude-3-opus">Claude 3.5</SelectItem>
                 </SelectContent>
               </Select>
             )}
-             <Button variant="ghost" size="icon" className="md:hidden" onClick={() => setMode("dashboard")}>
-               <LineChart className="h-5 w-5" />
-             </Button>
              <Button variant="ghost" size="sm" className="hidden md:flex text-muted-foreground hover:text-primary">
                <Sparkles className="mr-2 h-4 w-4" />
-               업그레이드
+               프로
              </Button>
           </div>
         </header>
@@ -138,27 +138,20 @@ export default function ChatPage() {
         <div ref={scrollRef} className="flex-1 overflow-y-auto p-4 md:p-6 scroll-smooth bg-muted/10">
           <div className="max-w-6xl mx-auto pb-4 h-full">
             
-            {mode === "dashboard" && (
-              <div className="space-y-6">
-                <h2 className="text-2xl font-heading font-bold">나의 학습 현황</h2>
-                <AchievementDashboard level={level} />
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                  <div className="h-[300px] bg-card rounded-xl border p-6 flex flex-col items-center justify-center text-muted-foreground">
-                    <LineChart className="h-10 w-10 mb-4 opacity-20" />
-                    <p>과목별 성취도 그래프가 여기에 표시됩니다.</p>
-                  </div>
-                   <div className="h-[300px] bg-card rounded-xl border p-6 flex flex-col items-center justify-center text-muted-foreground">
-                    <LayoutDashboard className="h-10 w-10 mb-4 opacity-20" />
-                    <p>오답 노트 및 약점 분석이 여기에 표시됩니다.</p>
-                  </div>
-                </div>
-              </div>
-            )}
+            {mode === "recommend" && <RecommendationPage />}
+            
+            {mode === "path" && <LearningPathPage />}
             
             {mode === "chat" && (
               <div className="max-w-3xl mx-auto space-y-6">
                 {messages.map((message) => (
-                  <MessageBubble key={message.id} message={message} />
+                  <div key={message.id}>
+                    <MessageBubble message={message} />
+                    {/* Show reference materials after the last assistant message */}
+                    {message.role === "assistant" && message === messages[messages.length - 1] && (
+                       <ReferenceMaterials />
+                    )}
+                  </div>
                 ))}
                 {isLoading && (
                   <div className="flex w-full gap-3 p-4">
@@ -184,8 +177,8 @@ export default function ChatPage() {
           </div>
         </div>
 
-        {/* Input Area - Hide in Dashboard mode */}
-        {mode !== "dashboard" && (
+        {/* Input Area - Hide in Recommendation & Path modes */}
+        {(mode === "chat" || mode === "compare") && (
           <div className="p-4 bg-background/80 backdrop-blur-sm border-t md:border-t-0 md:bg-transparent">
             <ChatInput 
               onSend={handleSendMessage} 
