@@ -12,12 +12,12 @@
 
 **🇰🇷 LLM 비교 연구 기반 학습 지원 웹 애플리케이션**
 
-GPT·Gemini·Claude의 정확도 분석을 토대로  
+GPT-4o, Gemini 2.0 Flash, Claude 4.5 Sonnet의 정확도 분석을 토대로  
 학생들이 목적에 맞는 최적 모델을 선택하고 활용할 수 있도록 돕는 플랫폼을 제안합니다.
 
 **🌍 Research-Based LLM Learning Platform Proposal**
 
-A proposed platform built on accuracy analysis of GPT, Gemini, and Claude,  
+A proposed platform built on accuracy analysis of GPT-4o, Gemini 2.0 Flash and Claude 4.5 Sonnet   
 designed to help students select and utilize the optimal AI model for their learning goals.
 
 ---
