@@ -1,6 +1,6 @@
 {
-    "buildCommand": "cd client && npm install && npm run build",
-    "outputDirectory": "client/dist",
+    "buildCommand": "npm install && npm run build",
+    "outputDirectory": "dist/public",
     "installCommand": "npm install",
     "framework": null,
     "rewrites": [
