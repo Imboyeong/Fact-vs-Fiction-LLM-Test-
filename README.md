@@ -10,21 +10,15 @@
 
 ---
 
-**🇰🇷 LLM 비교 연구 기반 학습 지원 웹 애플리케이션 컨셉 데모**
+**🇰🇷 LLM 비교 연구 기반 학습 지원 웹 애플리케이션**
 
-본 페이지는 LLM 모델 비교 실험에서 얻은 인사이트를 바탕으로,  
-학생들이 목적에 맞는 모델을 쉽게 선택하고 활용할 수 있도록 돕는 웹 애플리케이션의 컨셉 데모입니다.
+GPT·Gemini·Claude의 정확도 분석을 토대로  
+학생들이 목적에 맞는 최적 모델을 선택하고 활용할 수 있도록 돕는 플랫폼을 제안합니다.
 
-자동 모델 추천과 실시간 성능 비교 기능을 통해 각 모델의 특성을 직관적으로 이해할 수 있으며,  
-학습 목표에 가장 적합한 모델을 빠르게 선택할 수 있도록 설계된 테스트 화면입니다.
+**🌍 Research-Based LLM Learning Platform Proposal**
 
-**🌍 Concept Demo: AI Learning Assistant Platform**
-
-A concept demo built on insights from LLM comparison research,  
-designed to help students easily select and utilize the right AI model for their learning purposes.
-
-Features automated model recommendations and real-time performance comparisons,  
-enabling intuitive understanding of each model's characteristics and quick selection of the most suitable AI.
+A proposed platform built on accuracy analysis of GPT, Gemini, and Claude,  
+designed to help students select and utilize the optimal AI model for their learning goals.
 
 ---
 
