@@ -107,6 +107,8 @@ npm run dev:client
 이 프로젝트가 도움이 되셨다면 ⭐️ 한 번 눌러주세요!  
 여러분의 관심과 응원이 큰 힘이 됩니다 🙏
 
+If this project was helpful to you, feel free to hit the ⭐ button!
+Your support and interest mean a lot 🙏
 ---
 
 ## 📄 라이선스
