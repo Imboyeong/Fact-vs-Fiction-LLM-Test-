@@ -4,16 +4,25 @@
 
 [![Website](https://img.shields.io/badge/🌐_Website-llmstudyhub--test.vercel.app-4285f4?style=for-the-badge)](https://llmstudyhub-test.vercel.app)
 [![GitHub Stars](https://img.shields.io/github/stars/Imboyeong/Fact-vs-Fiction-LLM-Test-?style=for-the-badge&color=gold)](https://github.com/Imboyeong/Fact-vs-Fiction-LLM-Test-)
-[![License](https://img.shields.io/badge/License-MIT-green?style=for-the-badge)](LICENSE)
 
 ### GPT·Gemini·Claude, 비교하고 바로 쓰는 학습 허브
+**Compare and Choose: Your LLM Learning Hub**
 
-**LLM 비교 연구 기반 학습 지원 웹 애플리케이션**
+---
+
+**🇰🇷 LLM 비교 연구 기반 학습 지원 웹 애플리케이션**
 
 GPT·Gemini·Claude의 정확도 분석을 토대로  
 학생들이 목적에 맞는 최적 모델을 선택하고 활용할 수 있도록 돕는 플랫폼
 
-[🚀 **웹사이트 방문하기**](https://llmstudyhub-test.vercel.app) · [📄 **연구 보고서**](https://github.com/Imboyeong/Fact-vs-Fiction-LLM-Test-/blob/main/Fact-vs-Fiction-LLM-Report.pdf)
+**🌍 Research-Driven LLM Learning Platform**
+
+A web application built on comparative accuracy analysis of GPT, Gemini, and Claude,  
+helping students select and utilize the optimal AI model for their learning goals
+
+---
+
+[🚀 **웹사이트 방문 Visit Website**](https://llmstudyhub-test.vercel.app) · [📄 **연구 보고서 Research Report**](https://github.com/Imboyeong/Fact-vs-Fiction-LLM-Test-/blob/main/Fact-vs-Fiction-LLM-Report.pdf)
 
 </div>
 
