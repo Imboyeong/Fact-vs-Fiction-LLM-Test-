@@ -1,5 +1,5 @@
 {
-    "buildCommand": "npm install && npm run build",
+    "buildCommand": "npx vite build",
     "outputDirectory": "dist/public",
     "installCommand": "npm install",
     "framework": null,
