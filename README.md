@@ -3,7 +3,7 @@
 <div align="center">
 
 [![Website](https://img.shields.io/badge/🌐_Website-llmstudyhub--test.vercel.app-4285f4?style=for-the-badge)](https://llmstudyhub-test.vercel.app)
-[![GitHub Stars](https://img.shields.io/github/stars/Imboyeong/Fact-vs-Fiction-LLM-Test-?style=for-the-badge&color=gold)](https://github.com/Imboyeong/Fact-vs-Fiction-LLM-Test-)
+[![GitHub Stars](https://img.shields.io/github/stars/Imboyeong/Fact-vs-Fiction-LLM-Test-?style=for-the-badge&logo=github&color=yellow)](https://github.com/Imboyeong/Fact-vs-Fiction-LLM-Test-)
 
 ### GPT·Gemini·Claude, 비교하고 바로 쓰는 학습 허브
 **Compare and Choose: Your LLM Learning Hub**
