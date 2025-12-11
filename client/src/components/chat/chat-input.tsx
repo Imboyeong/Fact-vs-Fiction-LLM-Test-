@@ -6,11 +6,17 @@ import { useState, useRef, useEffect } from "react";
 interface ChatInputProps {
   onSend: (message: string) => void;
   isLoading: boolean;
+  initialValue?: string;
 }
 
-export function ChatInput({ onSend, isLoading }: ChatInputProps) {
-  const [input, setInput] = useState("");
+export function ChatInput({ onSend, isLoading, initialValue = "" }: ChatInputProps) {
+  const [input, setInput] = useState(initialValue);
   const textareaRef = useRef<HTMLTextAreaElement>(null);
+
+  // Update input when initialValue changes
+  useEffect(() => {
+    setInput(initialValue);
+  }, [initialValue]);
 
   const handleKeyDown = (e: React.KeyboardEvent) => {
     if (e.key === "Enter" && !e.shiftKey) {
@@ -46,7 +52,7 @@ export function ChatInput({ onSend, isLoading }: ChatInputProps) {
           className="min-h-[50px] max-h-[200px] w-full resize-none border-0 bg-transparent px-4 py-3 focus-visible:ring-0 shadow-none text-base"
           disabled={isLoading}
         />
-        
+
         <div className="flex items-center justify-between px-2 pb-1">
           <div className="flex gap-1">
             <Button variant="ghost" size="icon" className="text-muted-foreground hover:text-foreground rounded-full h-8 w-8">
@@ -56,9 +62,9 @@ export function ChatInput({ onSend, isLoading }: ChatInputProps) {
               <Mic className="h-4 w-4" />
             </Button>
           </div>
-          
-          <Button 
-            onClick={handleSend} 
+
+          <Button
+            onClick={handleSend}
             disabled={!input.trim() || isLoading}
             size="icon"
             className="rounded-full h-9 w-9 shrink-0 transition-all"
@@ -68,7 +74,7 @@ export function ChatInput({ onSend, isLoading }: ChatInputProps) {
         </div>
       </div>
       <div className="text-center mt-2">
-        <p className="text-xs text-muted-foreground">
+        <p className="text-xs text-red-600 font-medium">
           AI는 실수할 수 있습니다. 중요한 정보는 꼭 확인하세요.
         </p>
       </div>

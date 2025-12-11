@@ -3,6 +3,7 @@ import { Button } from "@/components/ui/button";
 import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs";
 import { ArrowRight, CheckCircle2, FileText, Calculator, Code, FlaskConical } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
+import { MODEL_INFO } from "@/lib/comparison-data";
 
 const LEARNING_PATHS = {
   essay: {
@@ -127,7 +128,7 @@ export function LearningPathPage() {
                         <div className="flex justify-between items-start">
                           <CardTitle className="text-lg">{step.title}</CardTitle>
                           <Badge variant="outline" className="font-mono">
-                            Recommended: {step.model}
+                            Recommended: {MODEL_INFO[step.model as keyof typeof MODEL_INFO]?.name || step.model}
                           </Badge>
                         </div>
                       </CardHeader>

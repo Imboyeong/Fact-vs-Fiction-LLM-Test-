@@ -25,12 +25,41 @@ export const MOCK_SESSIONS = [
   },
 ];
 
-export const INITIAL_GREETING: Message = {
-  id: "init-1",
-  role: "assistant",
-  content: "안녕하세요! 저는 AI 학습 도우미입니다. 수학, 과학, 문학 등 어떤 과목이든 도와드릴 수 있어요. 오늘 공부할 내용은 무엇인가요?",
-  timestamp: new Date(),
-};
+export function getInitialGreeting(level: StudentLevel): Message {
+  const greetingsByLevel: Record<StudentLevel, string> = {
+    middle: `안녕하세요! 저는 LLM StudyHub입니다. 수학, 과학, 문학 등 어떤 과목이든 도와드릴 수 있어요. 😊
+
+**공부하다 궁금한 점이 있으면 물어보세요!**
+
+예를 들면 이런 질문이 있어요:
+• 지구가 자전해서 낮과 밤이 생긴다는데, 왜 어떤 지역은 밤이 엄청 길거나 짧아져요?
+• 물의 끓는점이 100도인데, 왜 산 위에서는 더 낮은 온도에서 끓나요?
+• 소수는 왜 중요한가요? 실생활에서 어디에 쓰이나요?`,
+    high: `안녕하세요! 저는 LLM StudyHub입니다. 수학, 과학, 문학 등 어떤 과목이든 도와드릴 수 있어요.
+
+**공부하다 궁금한 점이 있으면 물어보세요!**
+
+예를 들면 이런 질문이 있어요:
+• 조건부확률이랑 베이즈 정리는 어떻게 시험 문제에서 구분해서 사용해야 하나요?
+• 미분과 적분의 관계를 미적분학의 기본정리로 어떻게 설명하나요?
+• 르샤틀리에 원리를 화학 평형 문제에서 어떻게 적용하나요?`,
+    university: `안녕하세요! 저는 LLM StudyHub입니다. 수학, 과학, 문학 등 어떤 과목이든 도와드릴 수 있어요.
+
+**공부하다 궁금한 점이 있으면 물어보세요!**
+
+예를 들면 이런 질문이 있어요:
+• 리포트에서 2차 출처를 인용할 때 참고문헌에는 어떻게 표기하는 게 맞나요?
+• 회귀분석에서 다중공선성이 발생했을 때 어떤 방법으로 해결할 수 있나요?
+• 논문 작성 시 연구의 한계점은 어느 섹션에서 어떻게 서술해야 하나요?`,
+  };
+
+  return {
+    id: "init-1",
+    role: "assistant",
+    content: greetingsByLevel[level],
+    timestamp: new Date(),
+  };
+}
 
 export async function simulateAIResponse(question: string, level: StudentLevel = "high"): Promise<string> {
   // Simulate network delay

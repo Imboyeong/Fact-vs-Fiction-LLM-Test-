@@ -24,12 +24,12 @@ export const MODEL_INFO: Record<ModelId, { name: string; description: string; be
     bestFor: ["창의적 글쓰기", "복합 추론", "코딩"],
   },
   "gemini-pro": {
-    name: "Gemini Pro 1.5",
+    name: "Gemini 2.0 Flash",
     description: "방대한 데이터 처리와 분석에 탁월합니다.",
     bestFor: ["데이터 분석", "요약", "리서치"],
   },
   "claude-3-opus": {
-    name: "Claude 3.5 Sonnet",
+    name: "Claude 4.5 Sonnet",
     description: "매우 논리정연하며 안전한 답변을 제공합니다.",
     bestFor: ["학술적 글쓰기", "섬세한 설명", "안전성"],
   },

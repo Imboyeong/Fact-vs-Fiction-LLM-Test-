@@ -17,14 +17,14 @@ const MOCK_REFERENCES: ReferenceMaterial[] = [
     type: "article",
     title: "미분과 적분의 기본 개념 이해",
     source: "수학의 정석 블로그",
-    url: "#",
+    url: "https://ko.wikipedia.org/wiki/%EB%AF%B8%EC%A0%81%EB%B6%84%ED%95%99",
   },
   {
     id: "2",
     type: "video",
     title: "10분만에 끝내는 미적분 기초",
     source: "Youtube - 수학1타",
-    url: "#",
+    url: "https://youtu.be/7vcHY2a4154?si=Luz15dPlQct-yLat",
   },
   {
     id: "3",
@@ -50,8 +50,11 @@ export function ReferenceMaterials() {
         </CardHeader>
         <CardContent className="space-y-2">
           {MOCK_REFERENCES.map((ref) => (
-            <div 
-              key={ref.id} 
+            <a
+              key={ref.id}
+              href={ref.url}
+              target="_blank"
+              rel="noopener noreferrer"
               className="flex items-center justify-between p-3 bg-background rounded-lg border hover:border-primary/50 transition-colors group cursor-pointer"
             >
               <div className="flex items-center gap-3">
@@ -66,7 +69,7 @@ export function ReferenceMaterials() {
                 </div>
               </div>
               <ExternalLink className="h-3 w-3 text-muted-foreground opacity-0 group-hover:opacity-100 transition-opacity" />
-            </div>
+            </a>
           ))}
         </CardContent>
       </Card>
