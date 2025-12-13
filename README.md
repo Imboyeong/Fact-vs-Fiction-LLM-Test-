@@ -145,7 +145,6 @@ npm run dev:client
 
 ### 4. 웹사이트 접속 (Access)
 브라우저에서 `http://localhost:5001/` 접속
-Open your browser and visit `http://localhost:5001/`
 
 ---
 
