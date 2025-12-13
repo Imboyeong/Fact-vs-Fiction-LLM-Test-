@@ -187,9 +187,3 @@ This project was conducted as a final assignment for the "Human-AI Collaboration
 <div align="center">
   <p>© 2025 LLM StudyHub Team. All rights reserved.</p>
 </div>
-
-
-
-## 📄 license
-
-© 2025 LLM StudyHub. All rights reserved.
