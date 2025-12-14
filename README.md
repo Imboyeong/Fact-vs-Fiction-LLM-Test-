@@ -157,7 +157,7 @@ npm run dev:client
 
 | 이름 | 역할 | 상세 업무 |
 |-----|------|----------|
-| 임보영 | 데이터셋 구축 & 기획(PM & Dev) | 질문·정답 구축, 전체 흐름 총괄, 웹 사이트 구축<br>Dataset construction, Web development, Project management |
+| 임보영 | 데이터셋 구축 & 웹 기획(PM & Dev) | 질문·정답 구축, 전체 흐름 총괄, 웹 사이트 구축<br>Dataset construction, Web development, Project management |
 | 최희조 | 데이터 수집 & 인사이트(Researcher) | 모델 응답 수집, 발표<br>Data collection, Insight derivation, Presentation |
 | 최은연 | 분석·개발 & 문서화(Analyst) | 자동 채점 코드, 시각화 , 결론 및 시사점 도출<br>Auto-grading logic, Visualization, Conclusion |
 
