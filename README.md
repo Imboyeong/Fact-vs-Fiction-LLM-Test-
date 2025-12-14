@@ -109,7 +109,7 @@ We started with the question: **"Which AI model best supports student academic a
 
 ### 1. 실험 설계 (Methodology)
 * **Dataset:** Text (28) + Image (4) = Total 32 Questions
-* **Target Models:** GPT-4o mini, Gemini 1.5 Flash, Claude 3 Haiku (Free model)
+* **Target Models:** GPT-4o · Gemini 2.0 Flash · Claude 4.5 Sonnet (Free model)
 * **Metrics:** 정확도(Accuracy), 안정성(Variance), Skill Tag(추론/정보/창의), Hallucination 유형
 
 ### 2. 실험 결과 (Key Findings)
