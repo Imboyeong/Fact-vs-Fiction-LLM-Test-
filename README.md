@@ -117,10 +117,10 @@ We started with the question: **"Which AI model best supports student academic a
 | 순위 | 모델 | 종합 점수 (Accuracy) | 특징 및 추천 대상 |
 |:---:|:---:|:---:|:---|
 | 🥇 **1위** | **GPT-4o** | **0.81** | **[All-Rounder]** 가장 안정적이며 리포트 작성, 개념 학습에 추천<br>Most stable. Recommended for reports & concepts |
-| 🥈 **2위** | **Gemini** | **0.80** | **[Trend Setter]** 최신 정보(Recent Fact) 만점. 뉴스, 시사 문제에 강력<br>Best for Recent Facts. Strong in news & current affairs |
-| 🥉 **3위** | **Claude** | **0.75** | **[Creative Drafter]** 창의성은 좋으나 사실 오류(Fact Error) 주의 필요<br>Great creativity, but beware of Fact Errors |
+| 🥈 **2위** | **Gemini 2.0 Flash** | **0.80** | **[Trend Setter]** 최신 정보(Recent Fact) 만점. 뉴스, 시사 문제에 강력<br>Best for Recent Facts. Strong in news & current affairs |
+| 🥉 **3위** | **Claude 4.5 Sonnet** | **0.75** | **[Creative Drafter]** 창의성은 좋으나 사실 오류(Fact Error) 주의 필요<br>Great creativity, but beware of Fact Errors |
 
-자세한 분석 결과는 [Fact-vs-Fiction LLM Report (PDF)](https://github.com/Imboyeong/Fact-vs-Fiction-LLM-Test-/blob/main/(Report)%20Fact-vs-Fiction-LLM.pdf)를 참고하세요.
+자세한 분석 결과는 [(Report) Fact-vs-Fiction LLM (PDF)](https://github.com/Imboyeong/Fact-vs-Fiction-LLM-Test-/blob/main/(Report)%20Fact-vs-Fiction-LLM.pdf)를 참고하세요.
 
 ---
 
