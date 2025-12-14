@@ -120,8 +120,7 @@ We started with the question: **"Which AI model best supports student academic a
 | 🥈 **2위** | **Gemini 2.0 Flash** | **0.80** | **[Trend Setter]** 최신 정보(Recent Fact) 만점. 뉴스, 시사 문제에 강력<br>Best for Recent Facts. Strong in news & current affairs |
 | 🥉 **3위** | **Claude 4.5 Sonnet** | **0.75** | **[Creative Drafter]** 창의성은 좋으나 사실 오류(Fact Error) 주의 필요<br>Great creativity, but beware of Fact Errors |
 
-자세한 분석 결과는 [(Report) Fact-vs-Fiction LLM (PDF)](https://github.com/Imboyeong/Fact-vs-Fiction-LLM-Test-/blob/main/(Report)%20Fact-vs-Fiction-LLM.pdf)를 참고하세요.
-
+<span style="color: red;">**★ 자세한 분석 결과는 [(Report) Fact-vs-Fiction LLM (PDF)](https://github.com/Imboyeong/Fact-vs-Fiction-LLM-Test-/blob/main/(Report)%20Fact-vs-Fiction-LLM.pdf)를 참고하세요.**</span>
 ---
 
 ## 🚀 시작하기 (Getting Started)
