@@ -144,13 +144,22 @@ npm run dev:client
 브라우저에서 `http://localhost:5001/` 접속
 
 ---
-
 ## 📂 프로젝트 구조 (Project Structure)
-- `client/src`: React Source Code
-- `client/src/pages`: Main Pages (Chat, Compare, etc.)
-- `client/src/components`: UI Components
-- `client/src/lib`: Data & Utilities
 
+- 📁 `client/` → 프론트엔드 (React 앱)
+- 📁 `server/` → 백엔드 (Express API)
+- 📁 `shared/` → 공유 타입 정의
+- 📁 `script/` → 빌드 스크립트
+- 🔧 설정 파일들 → `vite.config.ts`, `tsconfig.json` 등
+
+---
+## ️ 기술 스택 (Tech Stack)
+
+- **Frontend**: React 19, Vite, TypeScript, Tailwind CSS, Framer Motion
+- **UI 컴포넌트**: Radix UI, shadcn/ui (20개 이상의 컴포넌트)
+- **Backend**: Express.js, PostgreSQL, Drizzle ORM, Passport.js
+- **상태 관리**: TanStack React Query, React Hook Form
+- **배포**: Vercel
 ---
 
 ## 👥 팀 소개 (Team)
