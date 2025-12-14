@@ -21,7 +21,7 @@ A proposed platform built on accuracy analysis of GPT-4o, Gemini 2.0 Flash and C
 
 ---
 
-[🚀 **웹사이트 방문 Visit Website**](https://llmstudyhub-test.vercel.app) · [📄 **연구 보고서 Research Report**](https://github.com/Imboyeong/Fact-vs-Fiction-LLM-Test-/blob/main/Fact-vs-Fiction-LLM-Report.pdf)
+[🚀 **웹사이트 방문 Visit Website**](https://llmstudyhub-test.vercel.app) · [📄 **연구 보고서 Research Report**](https://github.com/Imboyeong/Fact-vs-Fiction-LLM-Test-/blob/main/(Report)%20Fact-vs-Fiction-LLM.pdf)
 
 </div>
 
@@ -120,7 +120,7 @@ We started with the question: **"Which AI model best supports student academic a
 | 🥈 **2위** | **Gemini** | **0.80** | **[Trend Setter]** 최신 정보(Recent Fact) 만점. 뉴스, 시사 문제에 강력<br>Best for Recent Facts. Strong in news & current affairs |
 | 🥉 **3위** | **Claude** | **0.75** | **[Creative Drafter]** 창의성은 좋으나 사실 오류(Fact Error) 주의 필요<br>Great creativity, but beware of Fact Errors |
 
-자세한 분석 결과는 [Fact-vs-Fiction LLM Report (PDF)](https://github.com/Imboyeong/Fact-vs-Fiction-LLM-Test-/blob/main/Fact-vs-Fiction-LLM-Report.pdf)를 참고하세요.
+자세한 분석 결과는 [Fact-vs-Fiction LLM Report (PDF)](https://github.com/Imboyeong/Fact-vs-Fiction-LLM-Test-/blob/main/(Report)%20Fact-vs-Fiction-LLM.pdf)를 참고하세요.
 
 ---
 
