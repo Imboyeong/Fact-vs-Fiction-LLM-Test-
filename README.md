@@ -37,6 +37,24 @@ A proposed platform built on accuracy analysis of GPT-4o, Gemini 2.0 Flash and C
 
 It helps students select the most suitable model among **GPT-4o, Gemini 2.0 Flash, and Claude 4.5 Sonnet** depending on the task type (e.g., Fact-checking, Creative writing, Information search) and compare responses in real-time to prevent **AI Hallucinations**.
 
+---
+
+## 🎯 컨셉 데모 (Concept Demo)
+
+### 🇰🇷 한국어
+
+본 페이지는 LLM 모델 비교 실험에서 얻은 인사이트를 바탕으로, 학생들이 목적에 맞는 모델을 쉽게 선택하고 활용할 수 있도록 돕는 웹 애플리케이션의 컨셉 데모입니다. 
+
+자동 모델 추천과 실시간 성능 비교 기능을 통해 각 모델의 특성을 직관적으로 이해할 수 있으며, 학습 목표에 가장 적합한 모델을 빠르게 선택할 수 있도록 설계된 테스트용 화면입니다.
+
+### 🌐 English
+
+This page is a concept demo of a web application designed to help students easily select and utilize appropriate models based on insights from LLM model comparison experiments. 
+
+Through automatic model recommendation and real-time performance comparison features, you can intuitively understand each model's characteristics and quickly select the most suitable model for your learning objectives.
+
+---
+
 ## ✨ 핵심 기능 (Key Features)
 
 | 기능 (Feature) | 설명 (Description) | 협업 가치 (Human-AI Value) |
