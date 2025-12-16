@@ -29,7 +29,7 @@ A proposed platform built on accuracy analysis of GPT-4o, Gemini 2.0 Flash and C
 
 ## 📖 프로젝트 소개 (Project Overview & Concept Demo)
 
-LLM StudyHub는 **모든 상황에 완벽한 AI는 없다**는 LLM 비교 실험 결과를 바탕으로 설계된 학습 지원 웹 애플리케이션의 컨셉 데모입니다.
+LLM StudyHub는 **모든 상황에 완벽한 AI는 없다**는 LLM 비교 실험 결과를 바탕으로 설계된 학습 지원 플랫폼입니다.
 
 학생들은 과제 유형(팩트 체크, 창의적 글쓰기, 최신 정보 탐색)에 따라
 GPT-4o, Gemini 2.0 Flash, Claude 4.5 Sonnet 중 적합한 모델을 선택하고,
