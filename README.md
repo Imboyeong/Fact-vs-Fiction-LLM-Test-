@@ -27,31 +27,23 @@ A proposed platform built on accuracy analysis of GPT-4o, Gemini 2.0 Flash and C
 
 ---
 
-## 📖 프로젝트 소개 (Project Overview)
+## 📖 프로젝트 소개 (Project Overview & Concept Demo)
 
-**LLM StudyHub**는 "모든 상황에 완벽한 AI는 없다"는 연구 결과를 바탕으로 설계된 **학습 최적화 웹 애플리케이션**입니다.
+LLM StudyHub는 **모든 상황에 완벽한 AI는 없다**는 LLM 비교 실험 결과를 바탕으로 설계된 학습 지원 웹 애플리케이션의 컨셉 데모입니다.
 
-학생들이 과제 성격(팩트 체크, 창의적 글쓰기, 최신 정보 탐색)에 따라 **GPT-4o, Gemini 2.0 Flash, Claude 4.5 Sonnet** 중 가장 적합한 모델을 선택하고, 모델 간 답변을 실시간으로 비교하여 AI 환각(Hallucination)을 방지할 수 있도록 돕습니다.
+학생들은 과제 유형(팩트 체크, 창의적 글쓰기, 최신 정보 탐색)에 따라
+GPT-4o, Gemini 2.0 Flash, Claude 4.5 Sonnet 중 적합한 모델을 선택하고,
+모델별 응답을 실시간으로 비교함으로써 각 LLM의 특성과 환각(Hallucination) 발생 가능성을 직관적으로 이해할 수 있습니다.
 
-**LLM StudyHub** is a web application designed based on the research finding that **"No AI is perfect for every situation."**   
+본 프로젝트는 자동 모델 추천과 응답 비교 기능을 통해
+학습 목적에 맞는 모델 선택 과정을 시각적으로 보여주는 데 초점을 두었으며,
+실제 서비스가 아닌 실험 및 시연 목적의 테스트용 웹 애플리케이션입니다.
 
-It helps students select the most suitable model among **GPT-4o, Gemini 2.0 Flash, and Claude 4.5 Sonnet** depending on the task type (e.g., Fact-checking, Creative writing, Information search) and compare responses in real-time to prevent **AI Hallucinations**.
+LLM StudyHub is a concept demo web application designed based on the insight that
+“no single LLM performs best in every situation.”
 
----
-
-## 🎯 컨셉 데모 (Concept Demo)
-
-### 🇰🇷 한국어
-
-본 페이지는 LLM 모델 비교 실험에서 얻은 인사이트를 바탕으로, 학생들이 목적에 맞는 모델을 쉽게 선택하고 활용할 수 있도록 돕는 웹 애플리케이션의 컨셉 데모입니다. 
-
-자동 모델 추천과 실시간 성능 비교 기능을 통해 각 모델의 특성을 직관적으로 이해할 수 있으며, 학습 목표에 가장 적합한 모델을 빠르게 선택할 수 있도록 설계된 테스트용 화면입니다.
-
-### 🌐 English
-
-This page is a concept demo of a web application designed to help students easily select and utilize appropriate models based on insights from LLM model comparison experiments. 
-
-Through automatic model recommendation and real-time performance comparison features, you can intuitively understand each model's characteristics and quickly select the most suitable model for your learning objectives.
+It allows students to select and compare GPT-4o, Gemini 2.0 Flash, and Claude 4.5 Sonnet according to task type, helping them understand model characteristics and reduce the risk of AI hallucinations through real-time response comparison.
+This project is intended for experimental and demonstration purposes, not as a full production service.
 
 ---
 
